@@ -56,3 +56,6 @@ config :uploader, Uploader.Repo,
   database: "uploader_dev",
   hostname: "localhost",
   pool_size: 10
+
+config :arc,
+  storage: Arc.Storage.Local
