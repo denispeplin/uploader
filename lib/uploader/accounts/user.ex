@@ -17,7 +17,7 @@ defmodule Uploader.Accounts.User do
   def changeset(%User{} = user, attrs) do
     user
     |> cast(attrs, [:name])
-    |> cast_attachments(attrs, [:avatar])
+    |> cast_attachments(attrs, [:avatar], allow_paths: true)
     |> validate_required([:name, :avatar])
   end
 end
